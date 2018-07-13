@@ -1,0 +1,226 @@
+/* Global Variation */
+
+Widget{
+    background-color: #e5e5e5;
+}
+
+MyProgressBar {
+      border: none;
+      border-radius: 0px;
+      text-align: center;
+      color: transparent;   /* font color*/
+      background: #EDE7F6;
+      margin: 0;
+  }
+
+MyProgressBar::chunk {
+      background: #661FFF;
+      border-radius: 0px;
+}
+
+
+MyButton1{
+    border: 1px solid #8E8E8E;
+    border-radius: 4px;
+    color: #661FFF;
+    background-color: #e5e5e5;
+}
+MyButton1::hover{
+    background-color: #EDE7F6;
+}
+MyButton1::pressed{
+    background-color: #D1C4E9;
+}
+MyButton1::disabled{
+    color: #969696;
+    background-color: #CCCCCC;
+}
+
+MyButton1#pushButton_enabled{
+    border: 0px solid #661FFF;
+    border-radius: 4px;
+    background-color: #661FFF;
+    color: #e5e5e5;
+}
+MyButton1#pushButton_enabled::hover{
+    background-color: #6E14EF;
+}
+MyButton1#pushButton_enabled::pressed{
+    background-color: #873DF2;
+}
+
+/* Slider */
+QSlider::groove:horizontal {
+      background: #c6aee7;
+      position: absolute; /* absolutely position 4px from the left and right of the widget. setting margins on the widget should work too... */
+/*      left: 4px; right: 4px;*/
+      height: 4;
+      border: 0;
+}
+/* 14 + 1 + 1 = 16    16 / 2 = 8 */
+QSlider::handle:horizontal {
+      width: 14px;
+      height: 14px;
+      border: 1px solid #6200EE;
+      border-radius: 8px;
+      background: #6200EE;
+      margin-top: -7px;
+      margin-bottom: -7px;
+}
+/*QSlider::handle:horizontal:hover {
+      width: 14px;
+      height: 14px;
+      border: 10px solid #c6aee7;
+      border-radius: 17px;
+      background: #6200EE;
+      margin-top: -17px;
+      margin-left: -10px;
+      margin-right: -10px;
+      margin-bottom: -17px;
+}*/
+/*QSlider::handle:horizontal:pressed {
+      width: 14px;
+      height: 14px;
+      border: 10px solid #c6aee7;
+      border-radius: 17px;
+      background: #6200EE;
+      margin-top: -16px;
+      margin-left: -11px;
+      margin-right: -11px;
+      margin-bottom: -16px;
+}*/
+
+  QSlider::sub-page:horizontal {
+      background: #6200EE;
+  }
+
+  QSlider::add-page:horizontal {
+      background: #c6aee7;
+  }
+
+
+/* MyDialog */
+MyDialog{
+    background-color: #e5e5e5;
+    opacity: 56;
+}
+MyDialog QWidget#mainWidget{
+    background-color: #99858585;
+}
+MyDialog QWidget#subWidget{
+    border-radius: 10;
+    background-color: #e5e5e5;
+}
+MyDialog QLabel#label1{
+    color: black;
+    font-size: 14;
+}
+MyDialog QLabel#label2{
+    color: gray;
+    font-size: 10;
+    text-align: left;
+}
+MyDialog QPushButton{
+    border: 0px;
+    background-color: #e5e5e5;
+    color: #661FFF;
+}
+MyDialog QPushButton:hover{
+    background-color: #d8d3e6;
+}
+MyDialog QPushButton:pressed{
+    background-color: #D0C0E6;
+}
+
+/* QRadioButton*/
+QRadioButton{
+    spacing: 14px;
+}
+QRadioButton::indicator{
+    width: 20px;
+    height: 20px;
+}
+QRadioButton::indicator::unchecked{
+    image: url(":/pic/radio-button-unchecked.png") 18 18;
+}
+
+QRadioButton::indicator::checked{
+    image: url(":/pic/radio-button-on.png");
+}
+
+/* QCheckBox */
+QCheckBox::indicator::checked{
+    image: url(":/pic/check_box-checked.png");
+}
+QCheckBox::indicator::unchecked{
+    image: url(":/pic/check_box-unchecked.png");
+}
+
+/* QGroupBox */
+QGroupBox{
+
+}
+
+/* QTableView */
+QTableView{
+    background-color: #ffffff;
+    selection-background-color: #F3EBFE;
+    selection-color: #000000;
+    gridline-color: #d8d3e6;
+    font-size: 14px;
+    border: 1px solid #d8d3e6;
+    margin-left: -4;
+    border-radius: 17px;
+}
+QTableView QScrollBar:horizontal {
+    border: 0px solid red;
+    border-radius: 5px;
+    background-color: #d8d8d8;
+    height: 10px;
+/*    margin: 0px 0px 0 0px;*/
+}
+QTableView QScrollBar::handle:horizontal {
+    background: #bebebe;
+    min-width: 20px;
+}
+QTableView QScrollBar::add-line:horizontal {
+    width: 0px;
+}
+
+QTableView QScrollBar::sub-line:horizontal {
+    width: 0px;
+}
+QTableView QScrollBar:vertical {
+    border: 0px solid red;
+    border-radius: 5px;
+    background-color: #d8d8d8;
+    width: 10px;
+}
+QTableView QScrollBar::handle:vertical {
+    background: #bebebe;
+    min-height: 20px;
+}
+QTableView QScrollBar::add-line:vertical {
+    height: 0px;
+}
+
+QTableView QScrollBar::sub-line:vertical {
+    height: 0px;
+}
+QTableView QHeaderView::section{
+    background-color: #ffffff;
+    color: #797979;
+    gridline-color: #d8d3e6;
+    font-size: 13px;
+    border: 1px solid #d8d3e6;
+}
+QTableView QHeaderView::section:checked{
+}
+QTableView QHeaderView::section:selected{
+}
+QTableView QCheckBox::indicator::checked{
+    image: url(":/pic/check_box-checked.png");
+}
+QTableView QCheckBox::indicator::unchecked{
+    image: url(":/pic/check_box-unchecked.png");
+}
